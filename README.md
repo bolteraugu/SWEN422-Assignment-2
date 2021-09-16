@@ -26,6 +26,10 @@ _instructions goes here_
 
 ### Vaccination Bubble Map (Justina Koh)
 
-_instructions goes here_
+* Click on the button on the bottom LHS of the screen to change between actual vacccination numbers, and number of fully vaccinated people (Click on it to change back).
+*  Hover over the data points to see the actual number of / percentage of vaccinated people per DHB.
+* Click on two points to compare and see the different numbers of the DHBs.
+* Scroll in and out to zoom in out of the map.
+* Click and drag the map to pan across the map.  
 
 
