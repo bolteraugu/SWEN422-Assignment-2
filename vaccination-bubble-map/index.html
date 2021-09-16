@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <!-- Load d3.js and the geo projection plugin -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <title>Vaccination Bubble Map</title>
+</head>
+
+<body>
+    <!-- Create an element where the map will take place -->
+    <div id="my_dataviz">
+        <div id="myTooltip" class="tooltip"></div>
+        <div id="myCompareTip" class="tooltip"></div>
+        <button id="myButtonTip" type="button" onClick="changeVariable()">Show Percentage of Fully Vaccinated
+            People</button>
+    </div>
+</body>
+
+<html lang="en">
+<script defer src='script.js'></script>
+
+</html>

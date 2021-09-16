@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <title>COVID-19 Country Comparer</title>
+        <script src="https://d3js.org/d3.v4.js"></script>
+    </head>
+
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif
+        }
+    </style>
+    
+    <body style="width: 1200px">
+        <div>
+            <div>From: 22nd January 2020</div>
+            <div>Updated: 25th August 2021</div>
+        </div>
+
+         <div style="margin-top: 10px">
+            <select id="selectButton1"></select>
+            <select id="selectButton2"></select>
+            <select id="selectButton3"></select>
+            <select id="selectButton4"></select>
+            <select id="selectButton5"></select>
+         </div>
+
+        <div style="margin-top: 15px">
+            <span>Displaying Countries: </span>
+            <span id="c1" style="color: indianred"></span>
+            <span id="c2" style="color: mediumslateblue"></span>
+            <span id="c3" style="color: steelblue"></span>
+            <span id="c4" style="color: green"></span>
+            <span id="c5" style="color: rebeccapurple"></span>
+        </div>
+
+        <div id="my_dataviz"></div>
+        <div style="margin-top: 10px">
+            <button type="button" id="selectCases" onclick="preUpdate(casesData)">Cases</button>
+            <button type="button" id="selectDeaths" onclick="preUpdate(deathsData)">Deaths</button>
+
+            <button style="float: right; margin-left: 5px" type="button" id="clear" onclick="preUpdate(casesData)">Clear Graph</button>
+            <button style="float: right" type="button" id="updateYaxis">Update Y Axis</button>
+        </div>
+        <div id="view" style="margin-top: 10px"></div>
+
+
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="visualisationLineDropdown.js"></script>
+    </body>
+</html>
