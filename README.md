@@ -12,17 +12,20 @@ This visualisation presents various data regarding the usage of the COVID Tracer
 
 __Features__:
 * Hover over the graph to see specific data points.
-* Click on the legends at the top center of the visualisation to hide certain lines.
-* Click to drag a portion of the graph to zoom in.
+* Click on the legends at the top of the visualisation to hide certain lines.
+* Click and drag a portion of the graph to zoom in.
 * Click the reset button to return to the initial state.
 
 ### COVID-19 Choropleth Map (August Bolter)
-**instructions goes here**
+
+_instructions goes here_
 
 ### COVID-19 Country Comparer (Eris Atienza)
-**instructions goes here**
+
+_instructions goes here_
 
 ### Vaccination Bubble Map (Justina Koh)
-**instructions goes here**
+
+_instructions goes here_
 
 
