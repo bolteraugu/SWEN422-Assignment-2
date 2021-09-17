@@ -252,8 +252,10 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
   var mouseclick = function (d) {
     timesclicked++;
 
-    lastcity = d.name
-    lastnumber = d.number
+    if (timesclicked % 2 == 1) {
+      lastcity = d.name
+      lastnumber = d.number
+    }
 
     // Highlighting the circle you clicked by changing the border colour
     d3.select(this)
