@@ -172,7 +172,7 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
 
   var lastcity
   var lastnumber
-  let timesclicked = 1
+  let timesclicked = 0
 
   // Start of code that controls what happens when you interact with the screen i.e. mouseclick, mousemove etc. 
   var mouseover = function (d) {
@@ -250,9 +250,45 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
 
   // Function called when you click on a circle: When you click on two circles, you should show the difference between the two places
   var mouseclick = function (d) {
+    timesclicked++;
+
+    console.log("Times clicked: ", timesclicked)
+
+    // Highlighting the circle you clicked by changing the border colour
+    d3.select(this)
+      .attr("stroke", "orange")
+
+
+    if (timesclicked == 1) {
+       // Resetting all of the border colours 
+       if (showingnumber) {
+        d3.selectAll('circle')
+          .attr("stroke", "#69A2B3")
+      }
+      else {
+        d3.selectAll('circle')
+          .attr("stroke", "#B36969")
+      }
+
+      // Highlighting the place you clicked again 
+      d3.select(this)
+      .attr("stroke", "orange")
+
+
+      // Clearing the tooltip
+      comparetip
+        .style("visibility", "hidden")
+    }
+    else if (timesclicked == 1) {
+      d3.select(this)
+        .attr("stroke", "orange")
+    }
     // Clicked twice already, display information comparing the two places. 
-    if (timesclicked == 2) {
+    else if (timesclicked == 2) {
       timesclicked = 0;
+
+      d3.select(this)
+        .attr("stroke", "orange")
 
       if (showingnumber) {
         // This is removing the commas from the numbers so that maths can be done
@@ -290,16 +326,16 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
             + difference + "%"
           )
       }
+
+      // We want to reset everything here 
     }
     else {
       lastcity = d.name
       lastnumber = d.number
 
-      // Clearing the tooltip
-      comparetip
-        .style("visibility", "hidden")
+      console.log("WHAT THE FUCK ")
+     
     }
-    timesclicked++;
   }
 
 
