@@ -18,7 +18,13 @@ __Features__:
 
 ### COVID-19 Choropleth Map (August Bolter)
 
-_instructions goes here_
+This visualisation presents the total number of COVID-19 cases/deaths for countries as a choropleth map.  
+  
+__Features__:  
+* Switch between total number of COVID-19 cases and total number of COVID-19 deaths by using the dropdown in the top right.
+* Zoom in and out using the mouse wheel.
+* Drag your mouse cursor to pan the map.
+* To see the exact total number of COVID-19 cases/deaths for a country hover over it on the map.
 
 ### COVID-19 Country Comparer (Eris Atienza)
 
