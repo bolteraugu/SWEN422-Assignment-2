@@ -252,16 +252,18 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
   var mouseclick = function (d) {
     timesclicked++;
 
-    console.log("Times clicked: ", timesclicked)
+    lastcity = d.name
+    lastnumber = d.number
 
     // Highlighting the circle you clicked by changing the border colour
     d3.select(this)
       .attr("stroke", "orange")
 
 
+    // If it has been clicked once, you need to reset everything 
     if (timesclicked == 1) {
-       // Resetting all of the border colours 
-       if (showingnumber) {
+      // Resetting all of the border colours 
+      if (showingnumber) {
         d3.selectAll('circle')
           .attr("stroke", "#69A2B3")
       }
@@ -272,7 +274,9 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
 
       // Highlighting the place you clicked again 
       d3.select(this)
-      .attr("stroke", "orange")
+        .attr("stroke", "orange")
+
+
 
 
       // Clearing the tooltip
@@ -326,15 +330,6 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
             + difference + "%"
           )
       }
-
-      // We want to reset everything here 
-    }
-    else {
-      lastcity = d.name
-      lastnumber = d.number
-
-      console.log("WHAT THE FUCK ")
-     
     }
   }
 
